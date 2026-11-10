@@ -1,0 +1,84 @@
+{
+  "_说明": [
+    "scenes.json — 每幕的分镜与元素定义。build_annotations.py / render_scenes.py 都读这一份。",
+    "cues: [首条字幕号, 末条字幕号]，决定这一幕的时间窗口。",
+    "region: 二选一。{x0,x1} 由脚本按墨迹自动收边（推荐，坐标从 find_regions.py 取）；",
+    "        {x,y,width,height} 为显式给定（图组交错、自动收边会切到主体时用）。",
+    "anchorCue: 这一元素开始作画所对应的字幕条号。句子念到哪，笔落到哪。",
+    "designMs: 设计时长；有配音时按幕长比例缩放，并被串行规则压到下一元素之前。",
+    "direction: left_to_right | right_to_left | top_to_bottom | bottom_to_top。",
+    "type: structure（建筑/场景结构）| figure（人物/道具）。"
+  ],
+  "project": "park-cleanup",
+  "narration": "audio/narration.json",
+  "scenes": [
+    {
+      "id": "scene-01",
+      "image": "scene-01-summer-park.png",
+      "cues": [1, 8],
+      "storyBasis": "暑假第一天，三个好朋友奔向熟悉的社区公园，满心期待完美的一天。",
+      "elements": [
+        {
+          "id": "park",
+          "label": "社区公园",
+          "role": "先交代故事发生的场所，为快乐的一天铺垫",
+          "subtitle": "Max, Ava, and Sam had a perfect day planned at their usual community park.",
+          "region": { "x0": 790, "x1": 1495 },
+          "anchorCue": 3,
+          "designMs": 9000,
+          "direction": "left_to_right",
+          "type": "structure"
+        },
+        {
+          "id": "kids",
+          "label": "三个朋友出发",
+          "role": "主要人物出场：抱球的 Max 与跟在后面的 Ava、Sam，情绪高涨",
+          "subtitle": "Max rushed ahead with a soccer ball under his arm, Ava and Sam trailing closely behind, full of energy.",
+          "region": { "x0": 40, "x1": 730 },
+          "anchorCue": 6,
+          "designMs": 14000,
+          "direction": "left_to_right"
+        }
+      ]
+    },
+    {
+      "id": "scene-02",
+      "image": "scene-02-litter-shock.png",
+      "cues": [9, 14],
+      "storyBasis": "走进公园，期待落空：滑梯栏杆卡着糖纸，地上滚着塑料瓶和薯片袋。",
+      "elements": [
+        {
+          "id": "slide",
+          "label": "被垃圾占据的滑梯",
+          "role": "冲突出现：原本心爱的游乐设施成了垃圾场",
+          "subtitle": "The once-beloved playground was now a chaotic mess of discarded trash—candy wrappers stuck in the slide's metal bars, plastic bottles rolling in the wind.",
+          "region": { "x0": 78, "x1": 700 },
+          "anchorCue": 10,
+          "designMs": 9000,
+          "direction": "top_to_bottom",
+          "type": "structure"
+        },
+        {
+          "id": "ava_arm",
+          "label": "Ava 伸手指向垃圾",
+          "role": "先落笔的手势：指向垃圾的那一下，把观众的注意力钉在冲突点上",
+          "subtitle": "\"Look at this!\" Ava shouted in disbelief",
+          "region": { "x": 605, "y": 338, "width": 100, "height": 162 },
+          "anchorCue": 13,
+          "designMs": 2600,
+          "direction": "left_to_right"
+        },
+        {
+          "id": "ava_react",
+          "label": "Ava 惊呼",
+          "role": "人物反应：满脸不敢相信，把情绪接上",
+          "subtitle": "as she pointed to the garbage near the swings.",
+          "region": { "x0": 690, "x1": 1075 },
+          "anchorCue": 13,
+          "designMs": 6500,
+          "direction": "left_to_right"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+# 铅笔素描绘本教学动画 —— 运行依赖
+# 安装：python3 scripts/bootstrap_env.py
+# 全部装进包内 .venv，不污染系统环境。
+
+# 渲染与图像处理（vendor/whiteboard-renderer 要用 cv2 / numpy / av）
+opencv-python>=4.8
+numpy>=1.24
+av>=12.0
+Pillow>=10.0
+
+# 配音（vendor/text-to-speech 要用；7.3.0 起改 v2 签名，低版本一律 403）
+edge-tts>=7.3.0
+
+# 配音脚本读 .docx 输入时用
+python-docx>=1.0

@@ -1,0 +1,13 @@
+# 本机生成物，不要随包分发
+.venv/
+__pycache__/
+*.pyc
+
+# 系统垃圾
+.DS_Store
+Thumbs.db
+
+# 运行时产物（在用户项目目录里，不在包内；列在这里防止误提交）
+*.mp4
+audio/
+check/

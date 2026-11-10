@@ -1,0 +1,375 @@
+{
+  "project": "park-cleanup",
+  "narration": "audio/narration.json",
+  "scenes": [
+    {
+      "id": "scene-01",
+      "image": "scene-01-summer-park.png",
+      "cues": [
+        1,
+        8
+      ],
+      "storyBasis": "暑假第一天，三个好朋友奔向熟悉的社区公园，满心期待完美的一天。",
+      "elements": [
+        {
+          "id": "park",
+          "label": "社区公园",
+          "role": "先交代故事发生的场所，为快乐的一天铺垫",
+          "subtitle": "Max, Ava, and Sam had a perfect day planned at their usual community park.",
+          "designMs": 9000,
+          "direction": "left_to_right",
+          "region": {
+            "x0": 790,
+            "x1": 1495
+          },
+          "anchorCue": 3,
+          "type": "structure"
+        },
+        {
+          "id": "kids",
+          "label": "三个朋友出发",
+          "role": "主要人物出场：抱球的 Max 与跟在后面的 Ava、Sam，情绪高涨",
+          "subtitle": "Max rushed ahead with a soccer ball under his arm, Ava and Sam trailing closely behind, full of energy.",
+          "designMs": 14000,
+          "direction": "left_to_right",
+          "region": {
+            "x0": 40,
+            "x1": 730
+          },
+          "anchorCue": 6
+        }
+      ]
+    },
+    {
+      "id": "scene-02",
+      "image": "scene-02-litter-shock.png",
+      "cues": [
+        9,
+        14
+      ],
+      "storyBasis": "走进公园，期待落空：滑梯栏杆卡着糖纸，地上滚着塑料瓶和薯片袋。",
+      "elements": [
+        {
+          "id": "slide",
+          "label": "被垃圾占据的滑梯",
+          "role": "冲突出现：原本心爱的游乐设施成了垃圾场",
+          "subtitle": "The once-beloved playground was now a chaotic mess of discarded trash—candy wrappers stuck in the slide's metal bars, plastic bottles rolling in the wind.",
+          "designMs": 9000,
+          "direction": "top_to_bottom",
+          "region": {
+            "x0": 78,
+            "x1": 700
+          },
+          "anchorCue": 10,
+          "type": "structure"
+        },
+        {
+          "id": "ava_arm",
+          "label": "Ava 伸手指向垃圾",
+          "role": "先落笔的手势：指向垃圾的那一下，把观众的注意力钉在冲突点上",
+          "subtitle": "\"Look at this!\" Ava shouted in disbelief",
+          "designMs": 2600,
+          "direction": "left_to_right",
+          "region": {
+            "x": 605,
+            "y": 338,
+            "width": 100,
+            "height": 162
+          },
+          "anchorCue": 13
+        },
+        {
+          "id": "ava_react",
+          "label": "Ava 惊呼",
+          "role": "人物反应：满脸不敢相信，把情绪接上",
+          "subtitle": "as she pointed to the garbage near the swings.",
+          "designMs": 6500,
+          "direction": "left_to_right",
+          "region": {
+            "x0": 690,
+            "x1": 1075
+          },
+          "anchorCue": 13
+        }
+      ]
+    },
+    {
+      "id": "scene-03",
+      "image": "scene-03-scan-the-park.png",
+      "cues": [
+        15,
+        23
+      ],
+      "storyBasis": "三人僵在原地环视全园：滑梯秋千、步道、草坪无一幸免，垃圾来自别人的不在意。",
+      "elements": [
+        {
+          "id": "kids_frozen",
+          "label": "三人僵在原地",
+          "role": "核心情绪：三个人站着不动，眼睛扫过整个游乐区",
+          "subtitle": "Max's face darkened with frustration. The three friends stood frozen, their eyes scanning the playground area.",
+          "designMs": 8000,
+          "direction": "bottom_to_top",
+          "region": {
+            "x0": 554,
+            "x1": 960
+          },
+          "anchorCue": 15
+        },
+        {
+          "id": "swing",
+          "label": "被垃圾埋住的秋千",
+          "role": "视线扫到的第一处：秋千架下也是垃圾",
+          "subtitle": "The once clean slides and swings were now buried under a layer of candy wrappers and plastic bottles.",
+          "designMs": 8000,
+          "direction": "top_to_bottom",
+          "region": {
+            "x0": 32,
+            "x1": 554
+          },
+          "anchorCue": 17,
+          "type": "structure"
+        },
+        {
+          "id": "trail",
+          "label": "步道与草坪",
+          "role": "视线延伸：步道被袋子罐子占领，草坪一片狼藉",
+          "subtitle": "Ava cast a glance at the walking trails... Sam looked out at the grassy fields—a disaster. The park was vast, but every corner seemed to have been touched by the carelessness of others.",
+          "designMs": 12000,
+          "direction": "left_to_right",
+          "region": {
+            "x0": 958,
+            "x1": 1495
+          },
+          "anchorCue": 19,
+          "type": "structure"
+        }
+      ]
+    },
+    {
+      "id": "scene-04",
+      "image": "scene-04-idea-spark.png",
+      "cues": [
+        24,
+        32
+      ],
+      "storyBasis": "Sam 踢飞塑料瓶发泄愤怒，Ava 叹气之后灵光一现，提议组建清洁小分队。",
+      "elements": [
+        {
+          "id": "kicker",
+          "label": "Sam 踢飞瓶子",
+          "role": "情绪爆发：愤怒化为动作，点出对不文明行为的反感",
+          "subtitle": "Sam kicked a plastic bottle in anger, sending it flying across the grass. \"It's not just thoughtless—it's disrespectful.\"",
+          "designMs": 11000,
+          "direction": "left_to_right",
+          "region": {
+            "x0": 77,
+            "x1": 690
+          },
+          "anchorCue": 24
+        },
+        {
+          "id": "ava_idea",
+          "label": "Ava 灵光一现",
+          "role": "转折点：从抱怨转向行动，提出 Cleanup Squad",
+          "subtitle": "Ava sighed thoughtfully, but suddenly her face lit up. \"We can't just leave it like this. Why don't we do something about it? We can, say, form a Cleanup Squad…\"",
+          "designMs": 13000,
+          "direction": "bottom_to_top",
+          "region": {
+            "x0": 840,
+            "x1": 1390
+          },
+          "anchorCue": 28
+        }
+      ]
+    },
+    {
+      "id": "scene-05",
+      "image": "scene-05-grab-bags.png",
+      "cues": [
+        33,
+        39
+      ],
+      "storyBasis": "三人立刻响应：Max 把足球放到一边，Sam 抓起被风吹起的垃圾袋，各自出发。",
+      "elements": [
+        {
+          "id": "ball",
+          "label": "被放下的足球",
+          "role": "行动的开始：玩乐的念头被放下",
+          "subtitle": "Without hesitation, Max picked up the soccer ball and tossed it aside gently, smiling at Ava.",
+          "designMs": 5000,
+          "direction": "top_to_bottom",
+          "region": {
+            "x0": 38,
+            "x1": 545
+          },
+          "anchorCue": 34
+        },
+        {
+          "id": "bag",
+          "label": "抓起垃圾袋",
+          "role": "关键道具：被风吹起的空袋子被一把抓住",
+          "subtitle": "Sam eagerly nodded, his anger fading into determination as he grabbed an empty garbage bag fluttering in the wind.",
+          "designMs": 6500,
+          "direction": "top_to_bottom",
+          "region": {
+            "x0": 580,
+            "x1": 940
+          },
+          "anchorCue": 37
+        },
+        {
+          "id": "dispatch",
+          "label": "三人分头出发",
+          "role": "全员投入：每个人拎着袋子走向自己的区域",
+          "subtitle": "Soon, each friend began collecting trash with newfound enthusiasm,",
+          "designMs": 8000,
+          "direction": "left_to_right",
+          "region": {
+            "x0": 1000,
+            "x1": 1520
+          },
+          "anchorCue": 39
+        }
+      ]
+    },
+    {
+      "id": "scene-06",
+      "image": "scene-06-cleanup-laughter.png",
+      "cues": [
+        40,
+        45
+      ],
+      "storyBasis": "分工清理：一人从滑梯取糖纸、一人弯腰捡瓶、一人蹲着拾罐，笑声重新回到公园。",
+      "elements": [
+        {
+          "id": "boy_slide",
+          "label": "滑梯上取糖纸",
+          "role": "具体劳动一：清掉卡在栏杆上的包装纸",
+          "subtitle": "clearing wrappers from slides,",
+          "designMs": 4000,
+          "direction": "top_to_bottom",
+          "region": {
+            "x0": 30,
+            "x1": 415
+          },
+          "anchorCue": 40
+        },
+        {
+          "id": "girl_bottle",
+          "label": "草地上捡瓶",
+          "role": "具体劳动二：弯腰捡起散落的塑料瓶，头顶的笑涡暗示气氛已经缓和",
+          "subtitle": "gathering plastic bottles scattered on the grass,",
+          "designMs": 4000,
+          "direction": "top_to_bottom",
+          "region": {
+            "x0": 440,
+            "x1": 960
+          },
+          "anchorCue": 41
+        },
+        {
+          "id": "boy_can",
+          "label": "步道边拾罐",
+          "role": "具体劳动三：蹲在路边把罐子收进袋子；劳动变成快乐，沮丧转为成就感",
+          "subtitle": "and carefully picking up cans along the trails. As they worked, their laughter returned, louder and brighter, echoing through the park, gradually transforming frustration into a sense of accomplishment.",
+          "designMs": 7000,
+          "direction": "bottom_to_top",
+          "region": {
+            "x0": 930,
+            "x1": 1248
+          },
+          "anchorCue": 42
+        }
+      ]
+    },
+    {
+      "id": "scene-07",
+      "image": "scene-07-join-in.png",
+      "cues": [
+        46,
+        51
+      ],
+      "storyBasis": "野餐的家庭和遛狗的老夫妇被打动，也加入清理，小分队扩成一个小社区。",
+      "elements": [
+        {
+          "id": "family",
+          "label": "野餐家庭加入",
+          "role": "影响扩散之一：旁观者被行动打动，主动来搭手",
+          "subtitle": "A family picnicking nearby noticed their efforts and quickly approached, offering to lend a hand.",
+          "designMs": 10000,
+          "direction": "left_to_right",
+          "region": {
+            "x0": 50,
+            "x1": 800
+          },
+          "anchorCue": 47
+        },
+        {
+          "id": "elderly",
+          "label": "遛狗老夫妇加入",
+          "role": "影响扩散之二：老人停下脚步弯腰捡拾，队伍壮大",
+          "subtitle": "An elderly couple walking their dog paused their stroll, inspired by the teamwork, and began collecting discarded items as well. Before long, the Cleanup Squad had grown into a small community,",
+          "designMs": 10000,
+          "direction": "right_to_left",
+          "region": {
+            "x0": 800,
+            "x1": 1420
+          },
+          "anchorCue": 49
+        }
+      ]
+    },
+    {
+      "id": "scene-08",
+      "image": "scene-08-tidy-again.png",
+      "cues": [
+        52,
+        57
+      ],
+      "storyBasis": "一小时后公园重归整洁，三人并肩看着自己的成果，一个小举动点燃了改变。",
+      "elements": [
+        {
+          "id": "park_clean",
+          "label": "恢复整洁的公园",
+          "role": "结果呈现：滑梯秋千在阳光下发亮，草地干净",
+          "subtitle": "Within an hour, the park reclaimed its tidy charm, pristine slides sparkling in the sun, and grassy fields free of litter.",
+          "designMs": 7000,
+          "direction": "left_to_right",
+          "region": {
+            "x0": 49,
+            "x1": 615
+          },
+          "anchorCue": 53,
+          "type": "structure"
+        },
+        {
+          "id": "kids_proud",
+          "label": "三人并肩远眺",
+          "role": "人物落点：三个孩子站在成果前，自豪而平静",
+          "subtitle": "Max, Ava, and Sam stood proudly surveying their work,",
+          "designMs": 7000,
+          "direction": "left_to_right",
+          "region": {
+            "x0": 615,
+            "x1": 1015
+          },
+          "anchorCue": 56
+        },
+        {
+          "id": "sprout",
+          "label": "嫩芽与暖阳",
+          "role": "主题升华：一个善意的念头就能长出改变",
+          "subtitle": "realizing how easily one thoughtful action could ignite positive change.",
+          "designMs": 4000,
+          "direction": "bottom_to_top",
+          "region": {
+            "x0": 1020,
+            "x1": 1480
+          },
+          "anchorCue": 57,
+          "type": "structure"
+        }
+      ]
+    }
+  ]
+}

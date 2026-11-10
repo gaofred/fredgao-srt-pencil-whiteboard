@@ -1,0 +1,31 @@
+Required Notice: Copyright 2026 Fred (gaofred) — https://github.com/gaofred/fredgao-srt-pencil-whiteboard
+
+本仓库除 vendor/ 目录外的全部内容（SKILL.md、README.md、references/、templates/、scripts/）
+均采用 CC BY-NC-SA 4.0，**禁止商业使用**。
+
+你可以：复制、分发、修改、基于本作品再创作。
+你必须：署名、非商业使用、以相同方式共享（衍生作品须沿用同样的许可）。
+SPDX-License-Identifier: CC-BY-NC-SA-4.0
+
+课堂使用、校内印刷、教研分享、非营利公众号推送，都不需要额外授权。
+对外商业交付、付费课程、商业产品内置，需另行取得授权。
+
+---
+
+第三方组件（不受上述 CC 许可约束，各自沿用原许可）
+
+1. vendor/whiteboard-renderer/
+   来源：srt-whiteboard-animation — https://github.com/geeklee/srt-whiteboard-animation
+   作者：江哥是老登啊
+   许可：MIT，全文见 vendor/whiteboard-renderer/LICENSE
+   说明：本包只复制了渲染所需脚本与握笔图，未修改算法；修改仅为路径与入口适配。
+
+2. vendor/text-to-speech/
+   来源：本作者另一技能 fredgao-text-to-speech
+   许可：同上 CC BY-NC-SA 4.0
+   说明：语音由 Microsoft Edge TTS 在线合成，音频内容的使用请遵守对应服务条款。
+
+---
+
+GitHub 侧边栏会显示 Other：其许可库只收录 CC BY-SA，不收录 CC BY-NC 系列，无法自动识别。
+许可全文在 LICENSE，以此为准。
