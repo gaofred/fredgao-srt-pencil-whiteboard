@@ -11,3 +11,6 @@ Thumbs.db
 *.mp4
 audio/
 check/
+
+# 例外：README 引用的演示片段要入库
+!docs/demo.mp4

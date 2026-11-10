@@ -13,12 +13,33 @@
 
 ---
 
+## 效果
+
+![课堂独坐](docs/still-classroom-tina.jpg)
+
+![两个新人](docs/still-two-newcomers.jpg)
+
+14 秒动图式片段（落笔过程 + 烧入字幕 + 旁白）：[`docs/demo.mp4`](docs/demo.mp4)
+
+上面两图出自读后续写《Maya 的新办公室》（569 词，9 幕 26 个元素、55 条字幕）；
+完整成片 3'51"，1080×720 / 60fps。画面里**不出现任何文字**，文字只在烧制的字幕层。
+
+---
+
 ## 一、安装（收到包的人看这里）
 
 ### 1. 放到技能目录
 
+从 GitHub 拉取（推荐，方便日后 `git pull` 更新）：
+
 ```bash
-# 解压后把整个文件夹放进来（目录名保持 fredgao-srt-pencil-whiteboard-v0.2）
+git clone https://github.com/gaofred/fredgao-srt-pencil-whiteboard.git \
+  ~/.workbuddy/skills/fredgao-srt-pencil-whiteboard-v0.2
+```
+
+或者解压 zip 后把整个文件夹放进来（目录名保持 `fredgao-srt-pencil-whiteboard-v0.2`）：
+
+```
 ~/.workbuddy/skills/
 ```
 
