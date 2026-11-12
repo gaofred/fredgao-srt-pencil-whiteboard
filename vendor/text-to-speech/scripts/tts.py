@@ -311,7 +311,7 @@ async def _synth(text, voice, out, rate, pitch, volume):
     await edge_tts.Communicate(text, voice, **kw).save(out)
 
 
-def synth(text, voice, out, rate, pitch, volume, retries=2):
+def synth(text, voice, out, rate, pitch, volume, retries=4):
     """合成；对偶发网络错误重试，对「在册但不发声」的音色给出人话提示。"""
     last = None
     err403 = False
@@ -327,10 +327,10 @@ def synth(text, voice, out, rate, pitch, volume, retries=2):
             if "403" in msg or "WSServerHandshake" in last:
                 err403 = True
                 break                                     # 签名被拒，重试无用
-            if "NoAudioReceived" in last:
-                break                                     # 这个错重试也没用
+            # NoAudioReceived 多半是端点瞬时抽风（同一句隔一会儿再请求就能出音），
+            # 不能直接放弃；真正下线的音色重试几次后仍会失败，不影响归因。
             import time
-            time.sleep(1.5 * (i + 1))
+            time.sleep(2.0 * (i + 1))
     print()                                               # 断掉 "合成 x/y ..." 那行
     if err403:
         sys.exit(
@@ -338,10 +338,9 @@ def synth(text, voice, out, rate, pitch, volume, retries=2):
             "不是网络问题、也不是音色问题。执行这条即可：\n"
             f"  {PY} -m pip install -U edge-tts\n"
             f"当前版本 {_ver()}，需要 ≥ {MIN_EDGE_TTS}。")
-    alt = UNAVAILABLE.get(voice)
-    if alt:
+    if voice in UNAVAILABLE:
         sys.exit(f"音色 {voice} 在微软免费端点上发不出音（不是你的问题）。"
-                 f"换同组另一个：--voice {_meta(alt)[1]}")
+                 f"跑 `{PY} scripts/check_voices.py` 看同组还有哪个可用。")
     if last == "NoAudioReceived":
         sys.exit(f"音色 {voice} 没有返回音频（该音色可能已下线）。"
                  f"跑 `{PY} scripts/check_voices.py` 看是它一个还是全都这样。")

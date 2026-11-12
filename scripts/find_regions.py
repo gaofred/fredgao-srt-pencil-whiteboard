@@ -2,10 +2,11 @@
 """按列投影自动切出场景图中的独立图组，输出原图像素坐标。
 
 用法：
-  <ENV_PY> tools/find_regions.py <图片> [--gap 40] [--pad 14] [--json]
+  <ENV_PY> tools/find_regions.py <图片> [--gap 40] [--pad 14] [--drop 28] [--json]
 
 原理：纸色是均匀亮色，凡明显暗于纸色的像素记为墨迹；对墨迹按列求和，
 相邻墨迹列之间若空白超过 --gap 像素就视为两组，再取每组的行范围。
+--drop 控制"多暗才算墨"，切不开时加严到 55/70。
 """
 from __future__ import annotations
 
@@ -75,10 +76,13 @@ def main(argv: list[str]) -> int:
     ap.add_argument("--gap", type=int, default=40)
     ap.add_argument("--pad", type=int, default=14)
     ap.add_argument("--min-ink", type=int, default=400)
+    ap.add_argument("--drop", type=int, default=28,
+                    help="墨迹阈值：比纸色暗多少才算墨。默认 28 偏松，组间浅排线会被算成墨迹而粘成一组；"
+                         "切不开时逐级加严（55 / 70），但要复查 check_coverage.py 有无漏笔画")
     ap.add_argument("--json", action="store_true")
     a = ap.parse_args(argv[1:])
     rgb = np.array(Image.open(a.image).convert("RGB"))
-    gs = groups(ink_mask(rgb), a.gap, a.pad, a.min_ink)
+    gs = groups(ink_mask(rgb, a.drop), a.gap, a.pad, a.min_ink)
     if a.json:
         print(json.dumps({"canvas": {"width": rgb.shape[1], "height": rgb.shape[0]}, "regions": gs}, ensure_ascii=False))
         return 0
